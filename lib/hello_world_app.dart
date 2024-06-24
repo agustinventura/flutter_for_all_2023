@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_for_all_2023/ui/home_page.dart';
 
 class HelloWorldApp extends StatelessWidget {
   const HelloWorldApp({
@@ -7,10 +8,16 @@ class HelloWorldApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-        child: Text(
-          'Hello World',
-          textDirection: TextDirection.ltr,
-        ));
+    return MaterialApp(
+      title: 'Hello World App',
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        primaryColor: Colors.purple,
+        appBarTheme: const AppBarTheme(
+          color: Colors.purple
+        )
+      ),
+      home: const HomePage()
+    );
   }
 }
