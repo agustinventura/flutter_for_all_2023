@@ -22,10 +22,13 @@ class HelloWorldContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-        child: Text(
-      'Hello World',
-      textDirection: TextDirection.ltr,
-    ));
+    return Center(
+        child: Container(
+          color: Colors.purple,
+          child: const Text(
+                'Hello World',
+                textDirection: TextDirection.ltr,
+              ),
+        ));
   }
 }
