@@ -24,15 +24,21 @@ class HelloWorldContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
         child: Container(
-          color: Colors.purple,
-          child: const Row(
-            children:[ Text(
-                  'Hello World',
-                  textDirection: TextDirection.ltr,
-              style: TextStyle(fontSize: 50),
-                )
-          ],
+      color: Colors.purple,
+      child: const Row(
+        children: [
+          Text(
+            'Hello World 1',
+            textDirection: TextDirection.ltr,
+            style: TextStyle(fontSize: 50),
           ),
-        ));
+          Text(
+            'Hello World 2',
+            textDirection: TextDirection.ltr,
+            style: TextStyle(fontSize: 50),
+          )
+        ],
+      ),
+    ));
   }
 }
