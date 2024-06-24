@@ -28,6 +28,7 @@ class HelloWorldContent extends StatelessWidget {
           child: const Text(
                 'Hello World',
                 textDirection: TextDirection.ltr,
+            style: TextStyle(fontSize: 50),
               ),
         ));
   }
