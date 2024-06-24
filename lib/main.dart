@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'hello_world_app.dart';
+
 void main() {
-  runApp(const Center(
-      child: Text(
-    'Hello World',
-    textDirection: TextDirection.ltr,
-  )));
+  runApp(
+    const HelloWorldApp()
+  );
 }
