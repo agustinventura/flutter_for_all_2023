@@ -27,15 +27,19 @@ class HelloWorldContent extends StatelessWidget {
       color: Colors.purple,
       child: const Row(
         children: [
-          Text(
-            'Hello World 1',
-            textDirection: TextDirection.ltr,
-            style: TextStyle(fontSize: 50),
+          Expanded(
+            child: Text(
+              'Hello World 1',
+              textDirection: TextDirection.ltr,
+              style: TextStyle(fontSize: 50),
+            ),
           ),
-          Text(
-            'Hello World 2',
-            textDirection: TextDirection.ltr,
-            style: TextStyle(fontSize: 50),
+          Expanded(
+            child: Text(
+              'Hello World 2',
+              textDirection: TextDirection.ltr,
+              style: TextStyle(fontSize: 50),
+            ),
           )
         ],
       ),
