@@ -25,11 +25,14 @@ class HelloWorldContent extends StatelessWidget {
     return Center(
         child: Container(
           color: Colors.purple,
-          child: const Text(
-                'Hello World',
-                textDirection: TextDirection.ltr,
-            style: TextStyle(fontSize: 50),
-              ),
+          child: const Row(
+            children:[ Text(
+                  'Hello World',
+                  textDirection: TextDirection.ltr,
+              style: TextStyle(fontSize: 50),
+                )
+          ],
+          ),
         ));
   }
 }
