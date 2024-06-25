@@ -1,22 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_for_all_2023/services/greeting_service.dart';
 import 'package:flutter_for_all_2023/ui/menu/hello_world_drawer.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+
+  final greetingService = GreetingService();
+
+  HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Hello World Page'),
+          title: Text('${greetingService.greet()} Page'),
         ),
         drawer: const HelloWorldDrawer(),
-        body: const HelloWorldContent());
+        body: HelloWorldContent());
   }
 }
 
 class HelloWorldContent extends StatelessWidget {
-  const HelloWorldContent({
+
+  final greetingService = GreetingService();
+
+  HelloWorldContent({
     super.key,
   });
 
@@ -25,20 +32,20 @@ class HelloWorldContent extends StatelessWidget {
     return Center(
         child: Container(
       color: Colors.purple,
-      child: const Row(
+      child: Row(
         children: [
           Expanded(
             child: Text(
-              'Hello World 1',
+              '${greetingService.greet()} 1',
               textDirection: TextDirection.ltr,
-              style: TextStyle(fontSize: 50),
+              style: const TextStyle(fontSize: 50),
             ),
           ),
           Expanded(
             child: Text(
-              'Hello World 2',
+              '${greetingService.greet()} 2',
               textDirection: TextDirection.ltr,
-              style: TextStyle(fontSize: 50),
+              style: const TextStyle(fontSize: 50),
             ),
           )
         ],

@@ -17,7 +17,7 @@ class HelloWorldApp extends StatelessWidget {
           color: Colors.purple
         )
       ),
-      home: const HomePage()
+      home: HomePage()
     );
   }
 }
