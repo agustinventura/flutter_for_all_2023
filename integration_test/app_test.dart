@@ -15,5 +15,18 @@ void main() {
 
       expect(find.byType(DrawerHeader), findsOneWidget);
     });
+
+    testWidgets('Drawer navigates to settings page', (WidgetTester tester) async {
+      await tester.pumpWidget(const HelloWorldApp());
+
+      expect(find.byType(DrawerHeader), findsNothing);
+
+      await tester.tap(find.byIcon(Icons.menu));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('Settings'));
+      await tester.pumpAndSettle();
+
+      expect(find.text('Current theme is Brightness.dark'), findsOneWidget);
+    });
   });
 }

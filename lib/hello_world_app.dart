@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_for_all_2023/ui/home_page.dart';
+import 'package:flutter_for_all_2023/routes.dart';
 
 class HelloWorldApp extends StatelessWidget {
   const HelloWorldApp({
@@ -8,7 +8,7 @@ class HelloWorldApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Hello World App',
       theme: ThemeData(
         brightness: Brightness.dark,
@@ -17,7 +17,7 @@ class HelloWorldApp extends StatelessWidget {
           color: Colors.purple
         )
       ),
-      home: HomePage()
+      routerConfig: router,
     );
   }
 }
